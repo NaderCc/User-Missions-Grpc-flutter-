@@ -1,4 +1,5 @@
-﻿using Grpc.Core;
+﻿using System.Linq;
+using Grpc.Core;
 using Microsoft.EntityFrameworkCore;
 using NewMission.Database;
 using NewMission.Models;
@@ -84,6 +85,25 @@ namespace NewMission.Services
                     CreateDate = project.CreatedAt.ToLongDateString(),
                 });
             }
+        }
+
+        public async override Task<ShowAllReply> ShowAll( ShowAllRequest request, ServerCallContext context)
+        {
+            var response = new ShowAllReply();
+            var projectsAll = await _dbContext.Projects.Include(x => x.user).Where(u => u.UserId == request.UserId).ToListAsync();
+
+            foreach (var one in  projectsAll)
+            {
+                response.ProjectAll.Add(new ReadProjectReply
+                {
+                    UserId = one.UserId,
+                    ProjectId = one.ProjectId,
+                    Title = one.Title,
+                    Description = one.Description,
+                    CreateDate = one.CreatedAt.ToLongDateString()
+                });
+            }
+            return response;
         }
        
     }

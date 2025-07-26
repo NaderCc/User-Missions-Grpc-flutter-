@@ -8,6 +8,7 @@ namespace NewMission.Models
     {
         [Key]
         public int Id {  get; set; }
+        [Required]
         public string Title {  get; set; }
         [Required]
         public string Description {  get; set; }
@@ -22,6 +23,6 @@ namespace NewMission.Models
         public Project project { get; set; }
 
         
-        public DateTime CreatedAt {  get; set; }
+        public DateTime CreatedAt = DateTime.Now;
     }
 }

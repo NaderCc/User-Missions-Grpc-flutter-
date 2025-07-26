@@ -5106,11 +5106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\NewMission.csproj",
+      "projectUniqueName": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\User-Missions-Grpc-flutter-\\NewMission.csproj",
       "projectName": "NewMission",
-      "projectPath": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\NewMission.csproj",
+      "projectPath": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\User-Missions-Grpc-flutter-\\NewMission.csproj",
       "packagesPath": "C:\\Users\\DR-Ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\obj\\",
+      "outputPath": "C:\\Users\\DR-Ahmed\\OneDrive\\Desktop\\NewProject\\NewMission\\User-Missions-Grpc-flutter-\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

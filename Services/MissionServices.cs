@@ -1,8 +1,9 @@
-﻿using NewMission.Protos;
+﻿using Microsoft.AspNetCore.Builder;
+using NewMission.Protos;
 
 namespace NewMission.Services
 {
-    public class MissionServices() : DoService.DoServiceBase
+    public class MissionServices() : MissionOptions.MissionOptionsBase
     {
     }
 }

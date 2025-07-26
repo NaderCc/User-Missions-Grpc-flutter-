@@ -24,11 +24,11 @@ namespace NewMission.Services
             var NewUser = new User(request.Name,request.Email,request.Password);
             await _dbContext.Users.AddAsync(NewUser);
             await _dbContext.SaveChangesAsync();
-            return await Task.FromResult(new CreateUserReply
+            return new CreateUserReply
             {
                 Id =  NewUser.UserId,
                 Name = request.Name,
-            });
+            };
 
         }
         public override async Task<LoginUserReply> UserLogin(LoginUserRequest request, ServerCallContext context)
@@ -36,16 +36,16 @@ namespace NewMission.Services
             var User = await dbContext.Users.FirstOrDefaultAsync(u => u.Email == request.Email&& u.Password == request.Password);
             if (User == null) 
             {
-                _printer.UserLoginPrinterRequest();
-                return null;
+                throw new RpcException(new(StatusCode.InvalidArgument, "Login failed"));
+                
             }
             else
             {
-                _printer.UserLogoutPrinterReply(User.Name);
-                return await Task.FromResult<LoginUserReply>(new LoginUserReply
+                
+                return new LoginUserReply
                 {
-                    Name=User.Name 
-                });
+                    Name="welcome back Mr:"+User.Name 
+                };
                  
             }
         }

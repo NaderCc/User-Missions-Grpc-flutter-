@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "NewMission.Protos";
+
+package missionservices;
+
+// The greeting service definition.
+service MissionOptions
+{
+	rpc AddMission(AddMissionRequest) returns (AddMissionReply);
+}
+
+message AddMissionRequest
+{
+    int32 projectId=1;
+	string title = 2;     
+    string description = 3;
+    //Status(Pending / InProgress / Done)
+    string status = 4;
+    //Priority(Low / Medium / High)
+    int32 priority = 5; 
+    string dueDate =6;
+
+}
+message AddMissionReply
+{
+    int32 projectId=1;
+    string title=2;
+
+}

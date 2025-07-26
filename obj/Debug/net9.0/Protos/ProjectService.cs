@@ -37,20 +37,21 @@ namespace NewMission.Protos {
             "ZBgBIAEoBRINCgV0aXRsZRgCIAEoCSJfChRVcGRhdGVQcm9qZWN0UmVxdWVz",
             "dBISCgpwcm9qZWN0X2lkGAEgASgFEg8KB3VzZXJfaWQYAiABKAUSDQoFdGl0",
             "bGUYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkiOQoSVXBkYXRlUHJvamVj",
-            "dFJlcGx5EhIKCnByb2plY3RfaWQYASABKAUSDwoHdXNlcl9pZBgCIAEoBSIk",
-            "Cg5TaG93QWxsUmVxdWVzdBISCgpzdHVkZW50X2lkGAEgASgFIg4KDFNob3dB",
-            "bGxSZXBseTLJAwoOUHJvamVjdE9wdGlvbnMSWwoNQ3JlYXRlUHJvamVjdBIl",
-            "LnByb2plY3RzZXJ2aWNlcy5DcmVhdGVQcm9qZWN0UmVxdWVzdBojLnByb2pl",
-            "Y3RzZXJ2aWNlcy5DcmVhdGVQcm9qZWN0UmVwbHkSVQoLUmVhZFByb2plY3QS",
-            "Iy5wcm9qZWN0c2VydmljZXMuUmVhZFByb2plY3RSZXF1ZXN0GiEucHJvamVj",
-            "dHNlcnZpY2VzLlJlYWRQcm9qZWN0UmVwbHkSWwoNVXBkYXRlUHJvamVjdBIl",
-            "LnByb2plY3RzZXJ2aWNlcy5VcGRhdGVQcm9qZWN0UmVxdWVzdBojLnByb2pl",
-            "Y3RzZXJ2aWNlcy5VcGRhdGVQcm9qZWN0UmVwbHkSWwoNRGVsZXRlUHJvamVj",
-            "dBIlLnByb2plY3RzZXJ2aWNlcy5EZWxldGVQcm9qZWN0UmVxdWVzdBojLnBy",
-            "b2plY3RzZXJ2aWNlcy5EZWxldGVQcm9qZWN0UmVwbHkSSQoHU2hvd0FsbBIf",
-            "LnByb2plY3RzZXJ2aWNlcy5TaG93QWxsUmVxdWVzdBodLnByb2plY3RzZXJ2",
-            "aWNlcy5TaG93QWxsUmVwbHlCFKoCEU5ld01pc3Npb24uUHJvdG9zYgZwcm90",
-            "bzM="));
+            "dFJlcGx5EhIKCnByb2plY3RfaWQYASABKAUSDwoHdXNlcl9pZBgCIAEoBSIh",
+            "Cg5TaG93QWxsUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgFIkYKDFNob3dBbGxS",
+            "ZXBseRI2Cgtwcm9qZWN0X2FsbBgBIAMoCzIhLnByb2plY3RzZXJ2aWNlcy5S",
+            "ZWFkUHJvamVjdFJlcGx5MskDCg5Qcm9qZWN0T3B0aW9ucxJbCg1DcmVhdGVQ",
+            "cm9qZWN0EiUucHJvamVjdHNlcnZpY2VzLkNyZWF0ZVByb2plY3RSZXF1ZXN0",
+            "GiMucHJvamVjdHNlcnZpY2VzLkNyZWF0ZVByb2plY3RSZXBseRJVCgtSZWFk",
+            "UHJvamVjdBIjLnByb2plY3RzZXJ2aWNlcy5SZWFkUHJvamVjdFJlcXVlc3Qa",
+            "IS5wcm9qZWN0c2VydmljZXMuUmVhZFByb2plY3RSZXBseRJbCg1VcGRhdGVQ",
+            "cm9qZWN0EiUucHJvamVjdHNlcnZpY2VzLlVwZGF0ZVByb2plY3RSZXF1ZXN0",
+            "GiMucHJvamVjdHNlcnZpY2VzLlVwZGF0ZVByb2plY3RSZXBseRJbCg1EZWxl",
+            "dGVQcm9qZWN0EiUucHJvamVjdHNlcnZpY2VzLkRlbGV0ZVByb2plY3RSZXF1",
+            "ZXN0GiMucHJvamVjdHNlcnZpY2VzLkRlbGV0ZVByb2plY3RSZXBseRJJCgdT",
+            "aG93QWxsEh8ucHJvamVjdHNlcnZpY2VzLlNob3dBbGxSZXF1ZXN0Gh0ucHJv",
+            "amVjdHNlcnZpY2VzLlNob3dBbGxSZXBseUIUqgIRTmV3TWlzc2lvbi5Qcm90",
+            "b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,8 +63,8 @@ namespace NewMission.Protos {
             new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.DeleteProjectReply), global::NewMission.Protos.DeleteProjectReply.Parser, new[]{ "ProjectId", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.UpdateProjectRequest), global::NewMission.Protos.UpdateProjectRequest.Parser, new[]{ "ProjectId", "UserId", "Title", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.UpdateProjectReply), global::NewMission.Protos.UpdateProjectReply.Parser, new[]{ "ProjectId", "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.ShowAllRequest), global::NewMission.Protos.ShowAllRequest.Parser, new[]{ "StudentId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.ShowAllReply), global::NewMission.Protos.ShowAllReply.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.ShowAllRequest), global::NewMission.Protos.ShowAllRequest.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::NewMission.Protos.ShowAllReply), global::NewMission.Protos.ShowAllReply.Parser, new[]{ "ProjectAll" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2146,7 +2147,7 @@ namespace NewMission.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShowAllRequest(ShowAllRequest other) : this() {
-      studentId_ = other.studentId_;
+      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2156,15 +2157,15 @@ namespace NewMission.Protos {
       return new ShowAllRequest(this);
     }
 
-    /// <summary>Field number for the "student_id" field.</summary>
-    public const int StudentIdFieldNumber = 1;
-    private int studentId_;
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private int userId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int StudentId {
-      get { return studentId_; }
+    public int UserId {
+      get { return userId_; }
       set {
-        studentId_ = value;
+        userId_ = value;
       }
     }
 
@@ -2183,7 +2184,7 @@ namespace NewMission.Protos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StudentId != other.StudentId) return false;
+      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2191,7 +2192,7 @@ namespace NewMission.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StudentId != 0) hash ^= StudentId.GetHashCode();
+      if (UserId != 0) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2210,9 +2211,9 @@ namespace NewMission.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StudentId != 0) {
+      if (UserId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(StudentId);
+        output.WriteInt32(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2224,9 +2225,9 @@ namespace NewMission.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StudentId != 0) {
+      if (UserId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(StudentId);
+        output.WriteInt32(UserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2238,8 +2239,8 @@ namespace NewMission.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StudentId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StudentId);
+      if (UserId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2253,8 +2254,8 @@ namespace NewMission.Protos {
       if (other == null) {
         return;
       }
-      if (other.StudentId != 0) {
-        StudentId = other.StudentId;
+      if (other.UserId != 0) {
+        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2272,7 +2273,7 @@ namespace NewMission.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            StudentId = input.ReadInt32();
+            UserId = input.ReadInt32();
             break;
           }
         }
@@ -2291,7 +2292,7 @@ namespace NewMission.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            StudentId = input.ReadInt32();
+            UserId = input.ReadInt32();
             break;
           }
         }
@@ -2336,6 +2337,7 @@ namespace NewMission.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShowAllReply(ShowAllReply other) : this() {
+      projectAll_ = other.projectAll_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2343,6 +2345,17 @@ namespace NewMission.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShowAllReply Clone() {
       return new ShowAllReply(this);
+    }
+
+    /// <summary>Field number for the "project_all" field.</summary>
+    public const int ProjectAllFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::NewMission.Protos.ReadProjectReply> _repeated_projectAll_codec
+        = pb::FieldCodec.ForMessage(10, global::NewMission.Protos.ReadProjectReply.Parser);
+    private readonly pbc::RepeatedField<global::NewMission.Protos.ReadProjectReply> projectAll_ = new pbc::RepeatedField<global::NewMission.Protos.ReadProjectReply>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::NewMission.Protos.ReadProjectReply> ProjectAll {
+      get { return projectAll_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2360,6 +2373,7 @@ namespace NewMission.Protos {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!projectAll_.Equals(other.projectAll_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2367,6 +2381,7 @@ namespace NewMission.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= projectAll_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2385,6 +2400,7 @@ namespace NewMission.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      projectAll_.WriteTo(output, _repeated_projectAll_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2395,6 +2411,7 @@ namespace NewMission.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      projectAll_.WriteTo(ref output, _repeated_projectAll_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2405,6 +2422,7 @@ namespace NewMission.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += projectAll_.CalculateSize(_repeated_projectAll_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2417,6 +2435,7 @@ namespace NewMission.Protos {
       if (other == null) {
         return;
       }
+      projectAll_.Add(other.projectAll_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2432,6 +2451,10 @@ namespace NewMission.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            projectAll_.AddEntriesFrom(input, _repeated_projectAll_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2447,6 +2470,10 @@ namespace NewMission.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            projectAll_.AddEntriesFrom(ref input, _repeated_projectAll_codec);
+            break;
+          }
         }
       }
     }

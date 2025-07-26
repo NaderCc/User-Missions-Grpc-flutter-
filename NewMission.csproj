@@ -6,10 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="Protos\mission_service.proto" />
+  </ItemGroup>
+
   
     <ItemGroup>
 		<Protobuf Include="Protos\user_service.proto" GrpcServices="Server" />
 		<Protobuf Include="Protos\project_service.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\mission_service.proto" GrpcServices="Server" />
 	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.64.0" />
