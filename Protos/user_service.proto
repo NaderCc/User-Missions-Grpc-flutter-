@@ -1,0 +1,38 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "NewMission.Protos";
+
+package services;
+
+// The greeting service definition.
+service DoService 
+{
+  // Sends a greeting
+  rpc CreateUser (CreateUserRequest) returns (CreateUserReply);
+  rpc UserLogin (LoginUserRequest) returns (LoginUserReply); 
+  
+  //rpc AddMission(AddMissionRequest) returns (AddMissionReply);
+} 
+
+message CreateUserRequest
+{
+	string name=1;
+	string email=2;
+	string password=3;
+}
+
+message CreateUserReply
+{
+	int32 id=1;
+	string name=2;
+}
+//UserLogin 
+message LoginUserRequest
+{
+	string email=1;
+	string password=2; 
+}
+message LoginUserReply
+{
+	string name=1;
+}
