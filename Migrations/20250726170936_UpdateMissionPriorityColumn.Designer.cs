@@ -12,8 +12,8 @@ using NewMission.Database;
 namespace NewMission.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250723091857_AddPasswordColumnToUser")]
-    partial class AddPasswordColumnToUser
+    [Migration("20250726170936_UpdateMissionPriorityColumn")]
+    partial class UpdateMissionPriorityColumn
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,15 +33,17 @@ namespace NewMission.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DueDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Priority")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");

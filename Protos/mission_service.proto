@@ -8,6 +8,8 @@ package missionservices;
 service MissionOptions
 {
 	rpc AddMission(AddMissionRequest) returns (AddMissionReply);
+    rpc ReadMission(ReadMissionRequest) returns (ReadMissionReply);
+    rpc UpdateMission(UpdateMissionRequest) returns (UpdateMissionReply);
 }
 
 message AddMissionRequest
@@ -18,7 +20,7 @@ message AddMissionRequest
     //Status(Pending / InProgress / Done)
     string status = 4;
     //Priority(Low / Medium / High)
-    int32 priority = 5; 
+    string priority = 5; 
     string dueDate =6;
 
 }
@@ -27,4 +29,38 @@ message AddMissionReply
     int32 projectId=1;
     string title=2;
 
+}
+message ReadMissionRequest
+{
+    int32 project_id=1;
+    int32 mission_id=2;
+}
+message ReadMissionReply
+{
+    int32 project_id=1;
+    int32 mission_id=2;
+    string title = 3;     
+    string description = 4;
+    //Status(Pending / InProgress / Done)
+    string status = 5;
+    //Priority(Low / Medium / High)
+    string priority = 6; 
+    string dueDate =7; 
+}
+message UpdateMissionRequest
+{
+     int32 project_id=1;
+    int32 mission_id=2;
+    string title = 3;     
+    string description = 4;
+    //Status(Pending / InProgress / Done)
+    string status = 5;
+    //Priority(Low / Medium / High)
+    string priority = 6; 
+    string dueDate =7; 
+}
+message UpdateMissionReply
+{
+    int32 project_id=1;
+    int32 mission_id=2;
 }

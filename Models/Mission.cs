@@ -12,11 +12,11 @@ namespace NewMission.Models
         public string Title {  get; set; }
         [Required]
         public string Description {  get; set; }
-        public DateTime DueDate {  get; set; }
+        public string DueDate {  get; set; }
         //Status(Pending / InProgress / Done)
         public string Status {  get; set; }
         //Priority(Low / Medium / High)
-        public enum Priority { Low,Medium , High }
+        public string Priority { get; set; }  
         //ProjectId(FK → Projects)
         [ForeignKey("project")]
         public int ProjectId { get; set; }
