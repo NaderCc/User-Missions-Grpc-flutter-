@@ -44,7 +44,7 @@ namespace NewMission.Services
                 DueDate = missionReader.DueDate,
             };
         }
-        public async override Task<UpdateMissionReply> UpdateMission (UpdateMissionRequest request, ServerCallContext context)
+        public async override Task<UpdateMissionReply> UpdateMission(UpdateMissionRequest request, ServerCallContext context)
         {
             var mission = await _dbContext.Missions.Include(x => x.project).FirstOrDefaultAsync
                 (x => x.Id == request.MissionId && x.project.ProjectId == request.ProjectId);
@@ -54,15 +54,53 @@ namespace NewMission.Services
             }
             else
             {
-                mission.Title =  request.Title;
+                mission.Title = request.Title;
                 mission.Description = request.Description;
                 mission.Status = request.Status;
                 mission.Priority = request.Priority;
-                mission.DueDate = request.DueDate; 
+                mission.DueDate = request.DueDate;
             }
             await _dbContext.SaveChangesAsync();
-            return new UpdateMissionReply {ProjectId = mission.ProjectId , MissionId = mission.Id};
-            
+            return new UpdateMissionReply { ProjectId = mission.ProjectId, MissionId = mission.Id };
+
+        }
+        public async override Task<DeleteMissionReply> DeleteMission(DeleteMissionRequest request, ServerCallContext context)
+        {
+            var mission = await _dbContext.Missions.Include(x => x.project).FirstOrDefaultAsync
+                (m => m.Id == request.MissionId && m.project.ProjectId == request.ProjectId);
+            if (mission == null)
+            { throw new RpcException(new(StatusCode.NotFound, "Invaild Arguments")); }
+            _dbContext.Missions.Remove(mission);
+            await _dbContext.SaveChangesAsync();
+            return new DeleteMissionReply
+            {
+                MissionTitle=mission.Title,
+                ProjectTitle=mission.project.Title,
+            };
+        }
+        public async override Task<ShowAllMissionReply> ShowAllMission(ShowAllMissionRequest request, ServerCallContext context)
+        {
+            var missions = new ShowAllMissionReply();
+            var mission = await _dbContext.Missions.Include(x => x.project).Where(f => f.ProjectId == request.ProjectId).ToListAsync();
+            if (mission == null)
+            {
+                throw new RpcException(new(StatusCode.NotFound, "Not Found"));
+            }
+            foreach (var one in mission)
+            {
+                missions.MissonRead.Add(new ReadMissionReply
+                {
+                    ProjectId=one.ProjectId,
+                    MissionId=one.Id,
+                    Title=one.Title,
+                    Description=one.Description,
+                    Status=one.Status,
+                    Priority=one.Priority,
+                    DueDate=one.DueDate,
+                    
+                });
+            }
+            return missions;
         }
     }
 }

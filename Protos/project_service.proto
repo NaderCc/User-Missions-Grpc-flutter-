@@ -12,7 +12,7 @@ service ProjectOptions
 	  rpc ReadProject( ReadProjectRequest) returns (ReadProjectReply);
 	  rpc UpdateProject(UpdateProjectRequest) returns (UpdateProjectReply);
 	  rpc DeleteProject(DeleteProjectRequest) returns (DeleteProjectReply);
-	  rpc ShowAll(ShowAllRequest) returns (ShowAllReply) ; 
+	  rpc ShowAllProject(ShowAllProjectRequest) returns (ShowAllProjectReply) ; 
 	   
 }
 //CreateProject 
@@ -67,11 +67,11 @@ message UpdateProjectReply
 	int32 user_id=2; 
 }
 
-message ShowAllRequest
+message ShowAllProjectRequest
 {
 	int32 user_id=1;
 }
-message ShowAllReply
+message ShowAllProjectReply
 {
 	repeated ReadProjectReply project_all=1;
 }

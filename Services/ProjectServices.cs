@@ -87,9 +87,9 @@ namespace NewMission.Services
             }
         }
 
-        public async override Task<ShowAllReply> ShowAll( ShowAllRequest request, ServerCallContext context)
+        public async override Task<ShowAllProjectReply> ShowAllProject( ShowAllProjectRequest request, ServerCallContext context)
         {
-            var response = new ShowAllReply();
+            var response = new ShowAllProjectReply();
             var projectsAll = await _dbContext.Projects.Include(x => x.user).Where(u => u.UserId == request.UserId).ToListAsync();
 
             foreach (var one in  projectsAll)

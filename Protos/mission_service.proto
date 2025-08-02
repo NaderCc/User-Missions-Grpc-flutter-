@@ -10,6 +10,8 @@ service MissionOptions
 	rpc AddMission(AddMissionRequest) returns (AddMissionReply);
     rpc ReadMission(ReadMissionRequest) returns (ReadMissionReply);
     rpc UpdateMission(UpdateMissionRequest) returns (UpdateMissionReply);
+    rpc DeleteMission(DeleteMissionRequest) returns (DeleteMissionReply);
+    rpc ShowAllMission(ShowAllMissionRequest) returns (ShowAllMissionReply);
 }
 
 message AddMissionRequest
@@ -63,4 +65,25 @@ message UpdateMissionReply
 {
     int32 project_id=1;
     int32 mission_id=2;
+}
+// Delete a mission 
+message DeleteMissionRequest
+{
+    int32 mission_id=1;
+    int32 project_id=2;
+}
+message DeleteMissionReply
+{
+    string mission_title=1;
+    string project_title=2;
+}
+//Show all missions 
+message ShowAllMissionRequest
+{
+    int32 project_id=1;
+}
+message ShowAllMissionReply
+{
+    
+    repeated ReadMissionReply misson_read =1;
 }
